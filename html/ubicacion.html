@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contacto - Ubicación</title>
+  <link rel="stylesheet" href="../css/ubicacion.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="top-bar">
+      <a href="../index.html" class="back-button">Volver al inicio</a>
+    </div>
+
+    <header class="header">
+      <h1 class="title">Propietario: <span class="owner">Sixto Ramallo</span></h1>
+      <p class="subtitle">Teléfono / WhatsApp: <strong id="phone-text">+591 79716075</strong></p>
+    </header>
+
+    <section class="card">
+      <div class="left">
+        <div class="map">
+          <iframe
+            title="Ubicación"
+            src="https://maps.google.com?q=-17.4097486,-66.3170826&z=17&hl=es&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <p class="address">Coordenadas: <span>-17.4097486, -66.3170826</span></p>
+        <p class="open-link"><a href="https://www.google.com/maps?q=-17.4097486,-66.3170826&z=17&hl=es" target="_blank" rel="noopener">Abrir en Google Maps</a></p>
+      </div>
+
+      <aside class="right">
+        <h2 class="qr-title">WhatsApp</h2>
+
+        <img id="qr-img" class="qr" alt="QR WhatsApp" src="../img/qrDe Contacto.jpeg" />
+
+        <p class="qr-note">Escanea el QR para abrir el chat o pulsa el botón.</p>
+        <p><a id="wa-link" class="btn" href="https://wa.me/59179716075?text=Hola" target="_blank" rel="noopener">Abrir WhatsApp</a></p>
+      </aside>
+    </section>
+
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

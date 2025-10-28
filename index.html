@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Tienda - Fullscreen</title>
+
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+ 
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/miEstilo2.css">
+</head>
+<body>
+
+<div class="main-container">
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="img/LogoNombre.png" alt="Logo" class="img-fluid" style="max-height:80px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMinimal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMinimal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item"><a class="nav-link active" href="html/innicio.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="html/galeriaChaperia.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="html/ubicacion.html">Ubicación</a></li>
+          <li class="nav-item"><a class="nav-link" href="html/ubicacion.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/banerokey1.png" class="d-block w-100 img-fluid" alt="Promo 1">
+      </div>
+      <div class="carousel-item">
+        <img src="img/banerokey2.png" class="d-block w-100 img-fluid" alt="Promo 2">
+      </div>
+      <div class="carousel-item">
+        <img src="img/banerokey3.png" class="d-block w-100 img-fluid" alt="Promo 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+
+  <h3 class="text-center text-primary fw-bold mt-3 py-2" style="background-color:wheat; letter-spacing:4px;">
+    Explora Nuestra Tienda
+  </h3>
+
+  
+  <div class="container my-4">
+    <div class="row g-4">
+
+
+<div class="container my-4">
+  <table style="width:100%; table-layout: fixed; border-collapse: separate; border-spacing: 20px;">
+    <tr>
+
+
+      <td style="vertical-align: top;">
+        <div class="card h-100 shadow-sm">
+          <img src="img/CONTACTO.png" class="card-img-top img-fluid" alt="Contacto">
+          <div class="card-body text-center">
+            <h5 class="card-title">Inicio</h5>
+            <p class="card-text">Quieres saber mas de Nosotros.</p>
+            <a href="html/innicio.html" class="btn btn-primary">Ir a inicio</a>
+          </div>
+        </div>
+      </td>
+
+
+      <td style="vertical-align: top;">
+        <div class="card h-100 shadow-sm">
+          <img src="img/gALERIA.png" class="card-img-top img-fluid" alt="Galería">
+          <div class="card-body text-center">
+            <h5 class="card-title">Galería</h5>
+            <p class="card-text">Mira nuestras fotos y productos destacados.</p>
+            <a href="html/galeriaChaperia.html" class="btn btn-primary">Ver galería</a>
+          </div>
+        </div>
+      </td>
+
+
+      <td style="vertical-align: top;">
+        <div class="card h-100 shadow-sm">
+          <img src="img/ubicacion.jpg" class="card-img-top img-fluid" alt="Ubicación">
+          <div class="card-body text-center">
+            <h5 class="card-title">Ubicación y Contacto</h5>
+            <p class="card-text">Encuéntranos fácilmente en el mapa.</p>
+            <a href="html/ubicacion.html" class="btn btn-primary">Ver ubicación y Contacto</a>
+          </div> 
+        </div>
+      </td>
+
+
+    </tr>
+  </table>
+</div>
+
+
+
+<div id="comentarios-flotante" class="comentarios-flotante left">
+  <div class="chat-header d-flex justify-content-between align-items-center">
+    <h5 style="margin:0;">💬 Comentarios</h5>
+    <button id="btn-toggle" class="btn-toggle">◀</button>
+  </div>
+  <div class="chat-body">
+    <textarea id="comentario" class="form-control mb-2" placeholder="Escribe tu mensaje..." rows="3"></textarea>
+    <button class="btn w-100" onclick="enviarComentario()">Enviar</button>
+    <div class="comentarios-carrusel border rounded p-2 mt-2">
+      <ul id="lista-comentarios" class="list-unstyled mb-0"></ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+     
+
+<footer class="footer-modern mt-3 py-4">
+  <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap px-4">
+
+
+    <div class="footer-item d-flex align-items-center mb-3 mb-md-0">
+      <img src="img/qrDe Contacto.jpeg" alt="QR Autor" class="footer-qr me-2">
+      <div>
+        <strong>Ramallo:</strong><br>
+      </div>
+    </div>
+
+
+    <div class="footer-item d-flex align-items-center mb-3 mb-md-0">
+      <img src="img/Rostro.jpeg" alt="QR Contacto" class="footer-qr me-2">
+      <div>
+        <strong>Contacto:</strong><br>
+        Tel: +591 79716075<br>
+        Dirección: Vinto Alto Mirador
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/miJs2.js"></script>
+
+
+<script>
+  function enviarComentario() {
+    const texto = document.getElementById('comentario').value.trim();
+    if (texto === '') {
+      alert('Por favor, escribe un comentario.');
+      return;
+    }
+
+    const li = document.createElement('li');
+    li.textContent = texto;
+
+    const lista = document.getElementById('lista-comentarios');
+    lista.appendChild(li);
+
+    document.getElementById('comentario').value = '';
+    lista.parentElement.scrollTop = lista.parentElement.scrollHeight;
+  }
+</script>
+
+</body>
+</html>
