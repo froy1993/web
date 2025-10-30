@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tornería Master - Pedidos</title>
+  <link rel="stylesheet" href="css/miStilos.css" />
+</head>
+<body>
+  <div class="phone-frame">
+    <main class="container">
+      <header>
+        <br><br>
+        <h1>Tornería Master</h1>
+        <p class="subtitle">Gestión de Pedidos</p>
+      </header>
+
+      <section id="role-screen" class="card">
+        <h2>Seleccionar rol</h2>
+        <div class="role-buttons">
+          <button id="btnCliente" class="btn primary">Cliente</button>
+          <button id="btnEmpleado" class="btn">Empleado / Propietario</button>
+        </div>
+      </section>
+
+      <section id="cliente-screen" class="card hidden">
+        <h2>Nuevo Pedido</h2>
+        <form id="formCliente">
+          <label>Nombre del cliente
+            <input id="c_nombre" required />
+          </label>
+          <label>Numero de Celular
+            <input id="c_telefono" />
+          </label>
+          <label>............CI.............
+            <input id="c_ci" />
+          </label>
+          <label>.......NIT..........
+            <input id="c_nit" />
+          </label>
+          <hr />
+          <label>Descripción del trabajo
+            <textarea id="t_nombre" placeholder="Ej: Eje para moto, pieza metálica..." required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Registrar Pedido</button>
+            <button type="button" id="btnVolverCliente" class="btn">Volver</button>
+          </div>
+        </form>
+        <div id="cliente-result" class="result"></div>
+      </section>
+
+      <section id="empleado-login" class="card hidden">
+        <h2>Ingreso Empleado</h2>
+        <label>Usuario
+          <input id="e_usuario" />
+        </label>
+        <label>Clave
+          <input id="e_clave" type="password" />
+        </label>
+        <div class="form-actions">
+          <button id="btnLoginEmpleado" class="btn primary">Ingresar</button>
+          <button id="btnVolverEmpleado" class="btn">Volver</button>
+        </div>
+        <p id="login-mensaje" class="small"></p>
+      </section>
+
+      <section id="empleado-panel" class="card hidden">
+        <h2>Panel de Pedidos</h2>
+        <p>Bienvenido, <span id="emp-nombre"></span></p>
+        <div class="panel-actions">
+          <button id="btnCerrarSesion" class="btn">Cerrar sesión</button>
+        </div>
+
+        <div id="pedidos-list" class="list"></div>
+        <div id="detalle-primary" class="result"></div>
+      </section>
+
+      <footer class="muted">
+        <small>Versión móvil de gestión de pedidos — Tornería</small>
+      </footer>
+    </main>
+
+  
+    <div class="toggle-tab" id="toggle-tab">
+      ▲
+    </div>
+
+
+    <nav class="bottom-nav" id="bottom-nav">
+      <button class="nav-btn" id="nav-back" title="Atrás">
+        <svg viewBox="0 0 24 24"><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" /></svg>
+      </button>
+      <button class="nav-btn" id="nav-home" title="Inicio">
+        <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,7L17,12H14V17H10V12H7L12,7Z" /></svg>
+      </button>
+      <button class="nav-btn" id="nav-recent" title="Recientes">
+        <svg viewBox="0 0 24 24"><path d="M4,7V9H13V7H4M4,17H10V15H4V17M4,13H13V11H4V13M15,14V12H21V14H15Z" /></svg>
+      </button>
+    </nav>
+  </div>
+
+
+  <script src="js/Pedidos.js"></script>
+  <script src="js/auxJs.js"></script>
+</body>
+</html>
